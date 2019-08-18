@@ -87,6 +87,9 @@ public class Astar{
             neighbor.getNoeudArrive().setG(tentative_gScore);
             neighbor.getNoeudArrive().setF(neighbor.getNoeudArrive().getHeuristic() + neighbor.getNoeudArrive().getG());
           }
+          if(closedSet.contains(neighbor.getNoeudArrive())){
+            continue;
+          }
         }
       }
     }
